@@ -1,0 +1,4 @@
+On Mon Mar 30 22:12:09 IST 2026, I reflect on open source.
+I use Git regularly.
+For me, freedom means Collaboration.
+I hope to build Open source tools and share it.

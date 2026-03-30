@@ -1,0 +1,5 @@
+System started
+Warning detected
+Error occurred
+Process completed
+Error detected again
