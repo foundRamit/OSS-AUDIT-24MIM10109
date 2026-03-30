@@ -1,149 +1,394 @@
-# Open Source Audit — Git
+Open Source Software Audit Report  
+Git, Distributed Version Control System  
 
-Student Name: RAMIT RAMAWTAR TAPARIA
-Roll Number: 24MIM10109
-Course: Open Source Software
-Chosen Software: Git
+Student Information : 
 
----
+Name: RAMIT RAMAWTAR TAPARIA  
+Roll Number: 24MIM10109  
+Course: Open Source Software  
+Chosen Software: Git  
 
-# Introduction
+Abstract  
 
-Open source software plays a major role in today's computing environment. Most modern systems rely heavily on open source technologies. These tools allow developers to collaborate, innovate, and share knowledge freely. One of the most important open source tools used by developers today is Git.
+This report provides an audit of Git, a distributed version control system commonly used in software development. The study examines Git’s origin, development philosophy, architecture, ecosystem, and practical uses in Linux environments. Additionally, this report includes five shell scripts that demonstrate a practical understanding of open-source concepts and Linux system operations.  
 
-Git is a distributed version control system that helps developers track changes in their code and collaborate efficiently. It has become the standard version control system across the software industry.
+The aim of this project is to evaluate Git as open-source software, assess its impact, and understand how it facilitates collaborative development. The report also compares Git with proprietary alternatives while discussing its advantages and limitations.  
 
-This report performs an audit of Git, analyzing its origin, philosophy, Linux footprint, ecosystem, and comparison with proprietary alternatives.
+1. Introduction to Open Source Software  
 
----
+Open source software has become a key part of modern computing. Unlike proprietary software, open source programs allow users to access the source code, enabling them to study, modify, and freely distribute the software.  
 
-# Part A — Origin and Philosophy
+The open-source movement encourages transparency, teamwork, and innovation. Developers around the world contribute to projects and enhance them together. This cooperative approach helps software evolve quickly and stay secure.  
 
-## A1 — Problem Git Was Created To Solve
+Open source software is widely used in many areas, including:  
 
-Git was created in 2005 by Linus Torvalds, the creator of Linux. Before Git existed, Linux developers were using a proprietary version control system called BitKeeper. Although BitKeeper was free for open source use, it was still controlled by a company.
+- Operating systems  
+- Web servers  
+- Programming tools  
+- Databases  
+- Development frameworks  
 
-Eventually, the relationship between Linux developers and BitKeeper broke down. Access to BitKeeper was revoked, leaving Linux developers without a version control system. This created a major challenge because Linux development involved thousands of contributors worldwide.
+Some popular examples of open source software include:  
 
-Linus Torvalds decided to build a new version control system. His main goals were:
+- Linux Operating System  
+- Git Version Control System  
+- Apache Web Server  
+- Python Programming Language  
+- Mozilla Firefox  
 
-* Speed
-* Distributed development
-* Data integrity
-* Open source availability
-* Efficient branching and merging
+Open source software also aids students and developers in learning practical skills. It offers insight into how software is created and allows users to contribute to real-world projects.  
 
-Within weeks, Git was developed. It quickly gained popularity because it solved many problems faced by developers working in teams.
+2. Introduction to Git  
 
-Today, Git is widely used across the software industry and powers platforms like GitHub and GitLab.
+Git is a distributed version control system that tracks changes in files. While it is mainly used in software development, it can also manage various types of files.  
 
----
+Git allows developers to:  
 
-## A2 — License Analysis
+- Track changes in code  
+- Collaborate with multiple developers  
+- Maintain project history  
+- Create branches  
+- Merge changes  
 
-Git is licensed under GNU General Public License Version 2 (GPL v2).
+Git differs from traditional version control systems because it is distributed. Each developer has a complete copy of the repository. This increases reliability and performance.  
 
-### Four Freedoms
+Git is widely used by:  
 
-The four freedoms of free software are:
+- Software companies  
+- Open source communities  
+- Students  
+- Individual developers  
 
-1. Freedom to run the software
-2. Freedom to study the source code
-3. Freedom to modify the software
-4. Freedom to distribute copies
+Currently, Git is the most popular version control system globally.  
 
-Git provides all four freedoms.
+3. History of Git  
 
-### Can Companies Sell Git?
+Git was created in 2005 by Linus Torvalds, who also created Linux. Before Git, Linux kernel developers used a proprietary tool called BitKeeper.  
 
-Yes, companies can sell Git but must share modifications under GPL.
+Due to licensing conflicts, Linux developers stopped using BitKeeper. This created a demand for a new version control system.  
 
-### GPL vs MIT
+Linus Torvalds developed Git with several goals in mind:  
 
-GPL requires open source derivatives. MIT allows proprietary use.
+- High performance  
+- Distributed architecture  
+- Data integrity  
+- Support for branching  
+- Scalability  
 
-### Free as in Freedom
+Git was initially created for Linux kernel development, but its popularity quickly spread in the software industry.  
 
-Git is free as in freedom because users can modify and distribute it.
+4. Creator of Git, Linus Torvalds  
 
----
+Linus Torvalds is a Finnish-American software engineer known for creating the Linux kernel. He developed Git to manage Linux development more effectively.  
 
-## A3 — Ethics of Open Source
+Torvalds focused on simplicity and performance when designing Git. He aimed to create a tool that could handle large-scale development.  
 
-Open source promotes transparency and collaboration. However, proprietary software still has advantages in terms of support and funding.
+Today, millions of developers and organizations around the world use Git.  
 
-Companies benefiting from open source is ethical when they contribute back to community.
+5. Why Git Was Created  
 
-Open source allows developers to stand on shoulders of giants and innovate faster.
+Git was created to address several challenges faced during Linux kernel development, including:  
 
----
+- Slow performance  
+- Limited branching support  
+- Centralized systems  
+- Poor scalability  
 
-# Part B — Linux Footprint
+Git tackled these issues by introducing a distributed architecture and efficient data storage.  
 
-Installation:
+6. Git Architecture  
 
-```
-sudo apt install git
-```
+Git has a distributed architecture. Each user has a complete copy of the repository, including its history.  
 
-Directories:
+Git consists of three main areas:  
 
-* /usr/bin/git
-* /etc/gitconfig
-* ~/.gitconfig
+- Working Directory  
 
-User:
+This is where files are edited.  
 
-Git runs under user privileges.
+- Staging Area  
 
-Update:
+Files are prepared before committing.  
 
-```
-sudo apt update
-sudo apt upgrade
-```
+- Repository  
 
----
+This stores the project history.  
 
-# Part C — FOSS Ecosystem
+Git uses snapshots instead of file differences. This enhances performance and efficiency.  
 
-Dependencies:
+7. Features of Git  
 
-* curl
-* openssl
-* zlib
+Git offers many powerful features:  
 
-Tools using Git:
+- Distributed Development  
 
-* GitHub
-* GitLab
-* Bitbucket
+Every developer has a complete copy of the repository.  
 
-Community:
+- Branching  
 
-* Mailing lists
-* GitHub repository
-* Developer forums
+Developers can create multiple branches.  
 
----
+- Merging  
 
-# Part D — Open Source vs Proprietary
+Branches can be merged easily.  
 
-| Feature     | Git       | Proprietary |
-| ----------- | --------- | ----------- |
-| Cost        | Free      | Paid        |
-| Security    | High      | Limited     |
-| Support     | Community | Paid        |
-| Flexibility | High      | Limited     |
+- Fast Performance  
 
-Conclusion:
+Git is designed for speed.  
 
-Git is highly recommended for development environments.
+- Security  
 
----
+Git uses hashing to ensure data integrity.  
 
-# Conclusion
+8. Git Workflow  
 
-Git is one of the most important open source tools used today. It enables collaboration, transparency, and innovation. This audit demonstrates the value of open source software.
+Git follows a straightforward workflow:  
 
+- Modify files  
+- Add files to the staging area  
+- Commit changes  
+- Push to the remote repository  
 
+This workflow helps keep development organized.  
+
+9. Git vs Centralized Version Control Systems  
+
+Centralized version control systems include:  
+
+- SVN  
+- CVS  
+
+Differences:  
+
+| Feature      | Git         | SVN          |  
+|--------------|-------------|--------------|  
+| Architecture  | Distributed | Centralized  |  
+| Speed        | Fast        | Slow         |  
+| Offline Work | Yes         | No           |  
+| Branching    | Easy        | Complex      |  
+
+Git is more flexible compared to centralized systems.  
+
+10. Git vs Proprietary Alternatives  
+
+Git competes with proprietary tools such as:  
+
+- BitKeeper  
+- Perforce  
+
+Git advantages include:  
+
+- Free  
+- Open source  
+- Community support  
+
+Git is often preferred over proprietary alternatives.  
+
+11. Git in the Linux Ecosystem  
+
+Git is widely used in Linux development. It manages contributions in Linux kernel development.  
+
+Many open source projects hosted on GitHub utilize Git.  
+
+Examples include:  
+
+- Linux Kernel  
+- GNOME  
+- KDE  
+
+Git plays a vital role in open source development.  
+
+12. Git Installation on Linux  
+
+Git can be installed using package managers:  
+
+- Ubuntu:  
+
+  sudo apt install git  
+
+- Fedora:  
+
+  sudo dnf install git  
+
+To check the version:  
+
+git --version  
+
+13. Git Basic Commands  
+
+Common Git commands include:  
+
+- Initialize repository:  
+
+  git init  
+
+- Clone repository:  
+
+  git clone  
+
+- Add files:  
+
+  git add .  
+
+- Commit changes:  
+
+  git commit -m "message"  
+
+- Push changes:  
+
+  git push  
+
+14. Git Branching and Merging  
+
+Git allows for multiple branches.  
+
+- Create branch:  
+
+  git branch new-feature  
+
+- Switch branch:  
+
+  git checkout new-feature  
+
+- Merge branch:  
+
+  git merge new-feature  
+
+Branching facilitates parallel development.  
+
+15. Git Remote Repositories  
+
+Remote repositories enable collaboration.  
+
+Common platforms include:  
+
+- GitHub  
+- GitLab  
+- Bitbucket  
+
+To push changes:  
+
+git push origin main  
+
+To pull changes:  
+
+git pull origin main  
+
+16. Git in Open Source Development  
+
+Git fosters open source collaboration.  
+
+Developers can:  
+
+- Fork repositories  
+- Create pull requests  
+- Review code  
+
+Git makes collaboration efficient.  
+
+17. Linux Shell Scripts Implementation  
+
+This project includes five shell scripts that demonstrate Linux concepts.  
+
+Scripts:  
+
+- System Identity Report  
+- Package Inspector  
+- Disk Audit  
+- Log Analyzer  
+- Manifesto Generator  
+
+These scripts show practical knowledge.  
+
+18. Script 1 — System Identity Report  
+
+This script displays system information:  
+
+- Username  
+- Kernel version  
+- OS version  
+- Date  
+
+This script helps users understand their system environment.  
+
+19. Script 2 — FOSS Package Inspector  
+
+This script checks for Git installation.  
+
+It displays:  
+
+- Git version  
+- Installation status  
+
+20. Script 3 — Disk and Permission Auditor  
+
+This script audits directories.  
+
+It displays:  
+
+- Permissions  
+- Disk usage  
+
+21. Script 4 — Log File Analyzer  
+
+This script analyzes log files.  
+
+It counts:  
+
+- Errors  
+- Warnings  
+
+22. Script 5 — Open Source Manifesto Generator  
+
+This script generates a manifesto based on user input.  
+
+It demonstrates:  
+
+- User interaction  
+- File generation  
+
+23. Screenshots  
+
+Screenshots of script execution are included in the repository.  
+
+24. Advantages of Git  
+
+- Free  
+- Fast  
+- Distributed  
+- Secure  
+
+25. Disadvantages of Git  
+
+- Learning curve  
+- Complex commands  
+
+26. Real World Applications  
+
+- Software development  
+- Documentation  
+- Collaboration  
+
+27. Learning Outcomes  
+
+This project helped gain understanding of:  
+
+- Git  
+- Open source  
+- Linux scripting  
+
+28. Conclusion  
+
+Git is one of the most important open source tools. It supports collaboration and effective development.  
+
+This project enhanced understanding of Git and Linux scripting in practice.  
+
+29. References  
+
+- Git Documentation  
+- Linux Documentation  
+- Open Source Initiative  
+
+Author  
+RAMIT RAMAWTAR TAPARIA  
+24MIM10109  
